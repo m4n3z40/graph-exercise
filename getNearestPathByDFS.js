@@ -1,15 +1,14 @@
 function getNearestPath(origin, destiny) {
     const visited = new Set([origin]);
     const nodesToVisit = [origin];
-    const path = [origin];
+    const path = [];
     let totalDistance = 0;
 
     while (nodesToVisit.length > 0) {
         const currentNode = nodesToVisit.shift();
+        path.push(currentNode);
 
         if (currentNode === destiny) {
-            path.push(destiny);
-
             break;
         }
 
@@ -20,7 +19,6 @@ function getNearestPath(origin, destiny) {
 
             visited.add(city);
             nodesToVisit.push(city);
-            path.push(city);
         }
     }
 
