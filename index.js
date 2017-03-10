@@ -12,11 +12,9 @@ function logResultsFor(title, {path, totalDistance}) {
     console.log(
 `
 ===============================================
-
 ${title}
-Path: ${path.map(city => city.name).join(' -> ')};
+Path: ${path.map(city => city.name).join(' -> ')}
 Total Distance: ${totalDistance}
-
 ===============================================`
     );
 }
