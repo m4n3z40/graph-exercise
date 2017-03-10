@@ -26,8 +26,16 @@ Diff: ${bestResult.totalDistance - worstResult.totalDistance}
     `);
 }
 
+
+console.time('BFS Algorithm time');
 const BFSResults = resultsForAlgorithm(new BFSAlgorithm);
+console.timeEnd('BFS Algorithm time');
+
+console.time('DFS Algorithm time');
 const DFSResults = resultsForAlgorithm(new DFSAlgorithm);
+console.timeEnd('DFS Algorithm time');
+
+console.log('');
 
 logResultsFor('BFS Algorithm', BFSResults);
 logResultsFor('DFS Algorithm', DFSResults);
