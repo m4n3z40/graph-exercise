@@ -10,22 +10,20 @@ function resultsForAlgorithm(algorithm) {
 
 function logResultsFor(title, {path, totalDistance}) {
     console.log(
-`
-===============================================
+`===============================================
 ${title}
 Path: ${path.map(city => city.name).join(' -> ')}
 Total Distance: ${totalDistance}
-===============================================`
-    );
+===============================================
+    `);
 }
 
 function logBestResult(bestResultName, bestResult, worstResult) {
     console.log(
-`
-${bestResultName} was the best result! 
+`${bestResultName} was the best result! 
 Total distance: ${bestResult.totalDistance}
-Diff: ${bestResult.totalDistance - worstResult.totalDistance}`
-    );
+Diff: ${bestResult.totalDistance - worstResult.totalDistance}
+    `);
 }
 
 const BFSResults = resultsForAlgorithm(new BFSAlgorithm);
